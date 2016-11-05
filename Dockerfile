@@ -20,6 +20,8 @@ RUN sed -i Gruntfile.js -e 's/port: port,/port: port, hostname: "",/' \
     
 ADD title.js /revealjs/plugin/
 
+ADD modified-beige.css /revealjs/css/theme/
+
 EXPOSE 8000
 VOLUME ["/revealjs/md/"]
 CMD ["grunt", "serve"]
