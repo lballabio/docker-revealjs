@@ -1,5 +1,5 @@
 FROM node:4-slim
-MAINTAINER fschl <fschl.code@gmail.com>
+MAINTAINER Luigi Ballabio <luigi.ballabio@gmail.com>
 
 ENV REVEAL_VERSION 3.2.0
 RUN curl -SLO "https://github.com/hakimel/reveal.js/archive/${REVEAL_VERSION}.tar.gz" \
