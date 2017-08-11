@@ -7,12 +7,6 @@ RUN curl -SLO "https://github.com/hakimel/reveal.js/archive/${REVEAL_VERSION}.ta
     && mv /reveal.js-${REVEAL_VERSION} /revealjs \
     && rm *.tar.gz
 
-ENV MATHJAX_VERSION 2.7.0
-RUN curl -SLO "https://github.com/mathjax/MathJax/archive/${MATHJAX_VERSION}.tar.gz" \
-    && tar xzf ${MATHJAX_VERSION}.tar.gz \
-    && mv /MathJax-${MATHJAX_VERSION} /revealjs/lib/mathjax \
-    && rm *.tar.gz
-
 RUN mkdir -p /revealjs/md
 
 RUN npm install grunt-cli -g
