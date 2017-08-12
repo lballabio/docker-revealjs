@@ -1,7 +1,7 @@
 FROM node:4-slim
 MAINTAINER Luigi Ballabio <luigi.ballabio@gmail.com>
 
-ENV REVEAL_VERSION 3.2.0
+ENV REVEAL_VERSION 3.3.0
 RUN curl -SLO "https://github.com/hakimel/reveal.js/archive/${REVEAL_VERSION}.tar.gz" \
     && tar xzf ${REVEAL_VERSION}.tar.gz \
     && mv /reveal.js-${REVEAL_VERSION} /revealjs \
@@ -24,7 +24,7 @@ ADD modified-beige.css /revealjs/css/theme/
 
 EXPOSE 8000
 VOLUME ["/revealjs/md/"]
-CMD ["grunt", "serve"]
+CMD ["npm", "start"]
 
 ONBUILD ADD index.html /revealjs/
 ONBUILD ADD slides.md /revealjs/md/
