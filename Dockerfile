@@ -6,7 +6,7 @@ RUN apt-get update \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
-ENV REVEAL_VERSION 3.5.0
+ENV REVEAL_VERSION 3.7.0
 RUN curl -SLO "https://github.com/hakimel/reveal.js/archive/${REVEAL_VERSION}.tar.gz" \
     && tar xzf ${REVEAL_VERSION}.tar.gz \
     && mv /reveal.js-${REVEAL_VERSION} /revealjs \
